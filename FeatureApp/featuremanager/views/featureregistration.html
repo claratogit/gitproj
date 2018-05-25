@@ -1,0 +1,74 @@
+<html>
+    <head>
+        <title>Feature Request Registration</title>
+    </head>
+    <body>
+        <h3>Feature Request Details</h3>
+        <form id="employeeForm" name="employeeForm" method="POST">
+            <div id="form-root">
+                <div>
+                    <label class="form-label">First Name:</label>
+                    <input type="text" id="txtFirstName" 
+        
+                      name="txtFirstName" data-bind="value:Employee.FirstName" />
+                </div>
+                 <div>
+                    <label class="form-label">Last Name:</label>
+                    <input type="text" id="txtLastName" 
+        
+                      name="txtLastName" data-bind="value:Employee.LastName"  />
+                </div>
+                <div>
+                    <label class="form-label">Full Name:</label>
+                    <input type="text" id="txtFullName" name="txtFullName" 
+        
+                      data-bind="value:Employee.FullName" readonly="readonly"  />
+                </div>
+                <div>
+                    <label class="form-label">Date Of Birth:</label>
+                    <input type="text" id="txtDateOfBirth" 
+        
+                      name="dateOfBirth" data-bind="value:Employee.DateOfBirth"  />
+                </div>
+                <div>
+                    <label>Education:</label>
+                    <input type="checkbox" value="graduation" id="chkGraduation" 
+        
+                      name="chkGraduation" data-bind="checked:Employee.EducationList" />Graduation
+                    <input type="checkbox" value="postGraduation" 
+        
+                      id="chkPostGraduation" name="chkPostGraduation" 
+        
+                      data-bind="checked:Employee.EducationList" />PostGraduation
+                </div>
+                <div>
+                    <label>Gender:</label>
+                    <input type="radio" id="rdoMale" name="gender" 
+        
+                      value="0"  data-bind="checked:Employee.Gender" />Male
+                    <input type="radio" id="rdoFeMale" name="gender" 
+        
+                      value="1" data-bind="checked:Employee.Gender"  />FeMale
+                </div>
+                <div>
+                    <label class="form-label">Department:</label>
+                    <select id="ddlDepartment" name="ddlDepartment" 
+        
+                      data-bind="options:$root.Employee.DepartmentList, optionsValue:'Id', 
+                        optionsText:'Name', value:Employee.DepartmentId">
+                    </select>
+                </div>
+                <div>
+                    <input type="button" id="btnSubmit" 
+        
+                      value="Submit" data-bind = "click: submit" />
+                     <input type="button" id="btnReset" 
+        
+                       value="Reset" data-bind = "click: reset" />
+                </div>
+            </div>
+        </form>
+        <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+        <script src="http://cdnjs.cloudflare.com/ajax/libs/knockout/2.2.0/knockout-min.js"></script>
+    </body>
+</html>

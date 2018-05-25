@@ -1,0 +1,10 @@
+#base.html
+$def with (page)
+<html>
+# html header and body code here
+    <select name="country">
+    $for code, country in countries:
+        <option value="$code">$country</option>
+    </select>
+# rest of document
+</html>
