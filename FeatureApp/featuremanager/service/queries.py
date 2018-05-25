@@ -23,7 +23,7 @@ class DataRetriever:
     session = Session()
 
     def getAllClients(self):
-        # 3 - extract all movies
+        # 3 - extract all clients
         # clients = self.session.query(Client).all()
         serialized_labels = [
             dataretriever.serialize(label)
@@ -32,7 +32,7 @@ class DataRetriever:
         return dumps(serialized_labels)
     
     def getAllProductAreas(self):
-        # 3 - extract all movies
+        # 3 - extract all clients
         serialized_labels = [
             dataretriever.serialize(label)
             for label in self.session.query(ProductArea).all()

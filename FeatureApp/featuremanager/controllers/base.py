@@ -1,4 +1,4 @@
 class index:
     def GET(self):
-        return "Hello, world!"
+        return "Hello, Test world!"
 
